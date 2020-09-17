@@ -10,55 +10,79 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header class="header">
-      <div class="container">
-        <nav class="level">
-          <div class="level-left">
-            <div class="level-item">
-              UniTwitter
+ <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <i class="fas fa-coffee"></i>
+        </a>
+
+         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+         </a>
+      </div>
+
+      <div id="navbarMainPages" class="navbar-menu">
+        <div class="navbar-start">
+           <a class="navbar-item">
+              Home
+           </a>
+           <a class="navbar-item">
+              About
+           </a>
+           <a class="navbar-item">
+              Help
+           </a>
+
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
+              </a>
+            <div class="navbar-dropdown">
+               <a class="navbar-item">
+                 Contact
+               </a>
+             
+             <hr class="navbar-divider">
+             <a class="navbar-item">
+               Report an issue
+             </a>
             </div>
           </div>
-          <div class="level-right">
-            <p class="level-item">
-             <!--%= link_to("Manage Users", users_path, :class => "button is-dark is-outlined") %>-->
-            </p>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-primary is-rounded ">
+                 <strong>Sign up</strong>
+                </a>
+                <a class="button is-light is-rounded">
+                   <span class="icon is-small">
+                      <i class="fas fa-sign-in-alt"></i>
+                   </span>
+                   <span>Log in</span>
+                </a>
+              </div>
+            </div>
           </div>
-        </nav>
-      </div>
-    </header>
-    
-    <nav class="level">
-       <p class="level-item has-text-centered">
-         <a class="link is-info">Home</a>
-       </p>
-       <p class="level-item has-text-centered">
-         <a class="link is-info">Menu</a>
-       </p>
-       <p class="level-item has-text-centered">
-         <img src="https://bulma.io/images/bulma-type.png" alt="" style="height: 30px;">
-       </p>
-       <p class="level-item has-text-centered">
-         <a class="link is-info">Help</a>
-       </p>
-       <p class="level-item has-text-centered">
-         <a class="link is-info">About</a>
-       </p>
-    </nav>
-    
-    <section class="section">
-      <div class="container">
+        </div>
+     </nav> 
+
        <%= yield %>
-      </div>
-    </section>
-    
-    <footer class="footer">
-      <div class="container">
-        <p>
-          <strong>Copyright © 2020 UniTwitter</strong> by Alison Rogério</a>. All rights reserved.
-        </p>
-      </div>
-    </footer>
-    
-  </body>
+       
+       
+       
+        <footer class="footer">
+         <div class="content has-text-centered">
+           <p>
+            <strong>Copyright © 2020 UniTwitter</strong> by Alison Rogério</a>. All rights reserved.
+           </p>
+         </div>
+        </footer>
+       
+   </body>
 </html>
